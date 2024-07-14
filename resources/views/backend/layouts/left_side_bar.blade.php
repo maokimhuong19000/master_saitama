@@ -195,12 +195,12 @@
                     </a>
                     <ul id="products">
                         <li>
-                            <a href="{{('/admin/product/list')}}">
+                            <a href="{{url('/admin/product/list')}}">
                                 <span class="label">List</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Products.Detail.html">
+                            <a href="{{url('/admin/product/list')}}">
                                 <span class="label">Detail</span>
                             </a>
                         </li>
@@ -213,12 +213,12 @@
                     </a>
                     <ul id="orders">
                         <li>
-                            <a href="Orders.List.html">
+                            <a href="{{url('/admin/order/list')}}">
                                 <span class="label">List</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Orders.Detail.html">
+                            <a href="{{url('/admin/order/detail')}}">
                                 <span class="label">Detail</span>
                             </a>
                         </li>
@@ -231,12 +231,12 @@
                     </a>
                     <ul id="customers">
                         <li>
-                            <a href="Customers.List.html">
+                            <a href="{{url('/admin/customer/list')}}">
                                 <span class="label">List</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Customers.Detail.html">
+                            <a href="{{url('/admin/customer/detail')}}">
                                 <span class="label">Detail</span>
                             </a>
                         </li>
@@ -292,7 +292,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Discount.html">
+                    <a href="{{url('admin/product/discount')}}">
                         <i data-acorn-icon="tag" class="icon" data-acorn-size="18"></i>
                         <span class="label">Discount</span>
                     </a>
