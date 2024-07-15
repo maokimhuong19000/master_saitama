@@ -6,6 +6,9 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\OrderController;
+use App\Http\Controllers\Backend\StoreFrontController;
+use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Backend\ShippingController;
 /*
 
 |--------------------------------------------------------------------------
@@ -49,6 +52,24 @@ Route::middleware('auth')->group(function () {
     });
 
 
+    Route::controller(StoreFrontController::class)->group(function(){
+        Route::get('/admin/store/home','shome')->name('admin.store.home');
+        Route::get('/admin/store/filter','sfffilter')->name('admin.store.filter');
+        Route::get('/admin/store/categories','sfcategories')->name('admin.store.categories');
+        Route::get('/admin/store/detail','sfdetail')->name('admin.store.detail');
+        Route::get('/admin/store/cart','sfcart')->name('admin.store.cart');
+        Route::get('/admin/store/checkout','sfcheckout')->name('admin.store.checkout');
+        Route::get('/admin/store/invoice','sfinvoice')->name('admin.store.invoice');
+    });
+    
+    Route::controller(ShippingController::class)->group(function (){
+        Route::get('/admin/shipping','shipping')->name('shipping');
+    });
+
+    Route::controller(SettingController::class)->group(function (){
+        Route::get('/admin/setting','setting')->name('setting');
+        Route::get('/admin/setting/general','gsetting')->name('general.setting');
+    });
 
 });
 

@@ -249,44 +249,44 @@
                     </a>
                     <ul id="storefront">
                         <li>
-                            <a href="Storefront.Home.html">
+                            <a href="{{url('/admin/store/home')}}">
                                 <span class="label">Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Storefront.Filters.html">
+                            <a href="{{url('/admin/store/filter')}}">
                                 <span class="label">Filters</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Storefront.Categories.html">
+                            <a href="{{url('/admin/store/categories')}}">
                                 <span class="label">Categories</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Storefront.Detail.html">
+                            <a href="{{url('/admin/store/detail')}}">
                                 <span class="label">Detail</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Storefront.Cart.html">
+                            <a href="{{url('/admin/store/cart')}}">
                                 <span class="label">Cart</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Storefront.Checkout.html">
+                            <a href="{{url('/admin/store/checkout')}}">
                                 <span class="label">Checkout</span>
                             </a>
                         </li>
                         <li>
-                            <a href="Storefront.Invoice.html">
+                            <a href="{{url('/admin/store/invoice')}}">
                                 <span class="label">Invoice</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="Shipping.html">
+                    <a href="{{url('/admin/shipping')}}">
                         <i data-acorn-icon="shipping" class="icon" data-acorn-size="18"></i>
                         <span class="label">Shipping</span>
                     </a>
@@ -298,7 +298,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="Settings.html">
+                    <a href="{{url('/admin/setting')}}">
                         <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
                         <span class="label">Settings</span>
                     </a>
