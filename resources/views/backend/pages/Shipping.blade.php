@@ -29,7 +29,7 @@
             <div class="card mb-2">
               <div class="row g-0 card-body">
                 <div class="col-auto">
-                  <img src="img/brand/dhl.webp" class="card-img rounded-md h-100 sh-6 sw-9" alt="thumb" />
+                  <img src="{{asset('/backend/assets/img/brand/dhl.webp')}}" class="card-img rounded-md h-100 sh-6 sw-9" alt="thumb" />
                 </div>
                 <div class="col">
                   <div class="ps-4">
@@ -56,76 +56,6 @@
                     <div>
                       <div class="text-small text-muted">STATUS</div>
                       <div class="badge bg-outline-primary">ACTIVE</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-2">
-              <div class="row g-0 card-body">
-                <div class="col-auto">
-                  <img src="img/brand/fedex.webp" class="card-img rounded-md h-100 sh-6 sw-9" alt="thumb" />
-                </div>
-                <div class="col">
-                  <div class="ps-4">
-                    <div class="row mb-1">
-                      <div class="col">
-                        <div class="heading text-primary mb-1">FedEx</div>
-                        <div class="mb-3">Dessert gummies soufflé toffee cake. Sesame snaps sesame snaps gummies oat cake sesame snaps.</div>
-                      </div>
-                      <div class="col-auto">
-                        <button class="btn btn-sm btn-icon btn-icon btn-icon-only btn-outline-primary" type="button">
-                          <i data-acorn-icon="gear"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="text-small text-muted">OPTIONS</div>
-                      <div class="text-alternate">Standard Shipping</div>
-                      <div class="text-alternate">Priority Shipping</div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="text-small text-muted">LOCATION</div>
-                      <div class="text-alternate">International</div>
-                    </div>
-                    <div>
-                      <div class="text-small text-muted">STATUS</div>
-                      <div class="badge bg-outline-primary">ACTIVE</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-2 opacity-75">
-              <div class="row g-0 card-body">
-                <div class="col-auto">
-                  <img src="img/brand/ups.webp" class="card-img rounded-md h-100 sh-6 sw-9" alt="thumb" />
-                </div>
-                <div class="col">
-                  <div class="ps-4">
-                    <div class="row mb-1">
-                      <div class="col">
-                        <div class="heading text-primary mb-1">UPSP</div>
-                        <div class="mb-3">Chocolate bar tootsie roll pastry icing dragée. Tiramisu danish donut tiramisu biscuit.</div>
-                      </div>
-                      <div class="col-auto">
-                        <button class="btn btn-sm btn-icon btn-icon btn-icon-only btn-outline-primary" type="button">
-                          <i data-acorn-icon="gear"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="text-small text-muted">OPTIONS</div>
-                      <div class="text-alternate">Standard Shipping</div>
-                      <div class="text-alternate">Priority Shipping</div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="text-small text-muted">LOCATION</div>
-                      <div class="text-alternate">International</div>
-                    </div>
-                    <div>
-                      <div class="text-small text-muted">STATUS</div>
-                      <div class="badge bg-outline-muted">INACTIVE</div>
                     </div>
                   </div>
                 </div>

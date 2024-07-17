@@ -157,70 +157,70 @@
                         </div>
 
                         <!-- Items Container Start -->
-
-                        <div class="card mb-2">
-                            <div class="row g-0 h-100 sh-lg-9 position-relative">
-                                <a href="{{url('/admin/product/detail')}}" class="col-auto position-relative">
-                                    <img src="{{asset('/backend/assets/img/product/small/product-1.webp')}}" alt="product"
-                                        class="card-img card-img-horizontal sw-11 h-100" />
-                                </a>
-                                <div class="col py-4 py-lg-0">
-                                    <div class="ps-5 pe-4 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <a href="{{url('/admin/product/detail')}}"
-                                                class="col-11 col-lg-4 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
-                                                Wooden Animal Toys
-                                                <div class="text-small text-muted text-truncate position">#2342
+                        @foreach ($products as $product)
+                            <div class="card mb-2">
+                                <div class="row g-0 h-100 sh-lg-9 position-relative">
+                                    <a href="{{ url('/admin/product/detail') }}" class="col-auto position-relative">
+                                        <img src="{{ asset('/backend/assets/img/product/small/product-1.webp') }}"
+                                            alt="product" class="card-img card-img-horizontal sw-11 h-100" />
+                                    </a>
+                                    <div class="col py-4 py-lg-0">
+                                        <div class="ps-5 pe-4 h-100">
+                                            <div class="row g-0 h-100 align-content-center">
+                                                <a href="{{ url('/admin/product/detail{id}') }}"
+                                                    class="col-11 col-lg-4 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
+                                                    {{ $product->id }}-{{ $product->title }}
+                                                    <div class="text-small text-muted text-truncate position">#2342
+                                                    </div>
+                                                </a>
+                                                <div
+                                                    class="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
+                                                    <div class="lh-1 text-alternate">{{ $product->stock }}</div>
                                                 </div>
-                                            </a>
-                                            <div
-                                                class="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">
-                                                <div class="lh-1 text-alternate">2.511</div>
-                                            </div>
-                                            <div
-                                                class="col-12 col-lg-3 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-4">
-                                                <div class="lh-1 text-alternate">$ 62.20</div>
-                                            </div>
-                                            <div
-                                                class="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
-                                                <span class="badge bg-outline-primary group">SALE</span>
-                                            </div>
-                                            <div
-                                                class="col-1 d-flex flex-column mb-2 mb-lg-0 align-items-end order-2 order-lg-last justify-content-lg-center">
-                                                <label class="form-check mt-2">
-                                                    <input type="checkbox" class="form-check-input pe-none" />
-                                                </label>
+                                                <div
+                                                    class="col-12 col-lg-3 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-4">
+                                                    <div class="lh-1 text-alternate">$ {{ $product->price }}</div>
+                                                </div>
+                                                <div
+                                                    class="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 align-items-start justify-content-center order-5">
+                                                    <span
+                                                        class="badge bg-outline-primary group">{{ $product->status }}</span>
+                                                </div>
+                                                <div
+                                                    class="col-1 d-flex flex-column mb-2 mb-lg-0 align-items-end order-2 order-lg-last justify-content-lg-center">
+                                                    <label class="form-check mt-2">
+                                                        <input type="checkbox" class="form-check-input pe-none" />
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                     
-                        <!-- Items Container Start -->
-
+                        @endforeach
                         <!-- List Items End -->
                     </div>
                 </div>
                 <!-- Items Pagination Start -->
                 <div class="w-100 d-flex justify-content-center">
-                    <nav>
-                        <ul class="pagination">
-                            <li class="page-item disabled">
-                                <a class="page-link shadow" href="#" tabindex="-1" aria-disabled="true">
-                                    <i data-acorn-icon="chevron-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item active"><a class="page-link shadow" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link shadow" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link shadow" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link shadow" href="#">
-                                    <i data-acorn-icon="chevron-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    {{ $products->links('vendor/pagination/bootstrap-5') }}
+                    {{-- <nav>
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link shadow" href="" tabindex="-1" aria-disabled="true">
+                                        <i data-acorn-icon="chevron-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link shadow" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link shadow" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link shadow" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link shadow" href="#">
+                                        <i data-acorn-icon="chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav> --}}
                 </div>
                 <!-- Items Pagination End -->
             </div>
@@ -261,3 +261,4 @@
 {{-- @include('backend.layouts.all_model') --}}
 <!-- Theme Settings Modal end -->
 @include('backend.layouts.pfooter')
+.

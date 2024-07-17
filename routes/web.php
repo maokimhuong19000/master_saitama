@@ -41,14 +41,14 @@ Route::middleware('auth')->group(function () {
 
     Route::controller(CustomerController::class)->group(function () {
         Route::get('/admin/customer/list', 'cus_list')->name('admin.cus.list');
-        Route::get('/admin/customer/detail', 'cus_detail')->name('admin.cus.list');
+        Route::get('/admin/customer/detail', 'cus_detail')->name('admin.cus.detail');
         
     });
 
 
     Route::controller(OrderController::class)->group(function () {
-        Route::get('/admin/order/list', 'order_list')->name('admin.cus.list');
-        Route::get('/admin/order/detail', 'order_detail')->name('admin.cus.list');
+        Route::get('/admin/order/list', 'order_list')->name('admin.order.list');
+        Route::get('/admin/order/detail', 'order_detail')->name('admin.order.detail');
     });
 
 
