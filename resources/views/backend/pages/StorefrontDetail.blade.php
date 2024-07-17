@@ -1,4 +1,4 @@
-@include('backend.layouts.pheader')
+@include('backend.layouts.sf_header')
   <body>
     <div id="root">
       @include('backend.layouts.left_side_bar')
@@ -1464,4 +1464,4 @@
     </div>
     <!-- Search Modal End -->
 
-    @include('backend.layouts.footer')
+    @include('backend.layouts.sf_footer')

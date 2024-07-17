@@ -1,4 +1,4 @@
-@include('backend.layouts.pheader')
+@include('backend.layouts.oheader')
 
   <body>
     <div id="root">
@@ -594,4 +594,4 @@
     @include('backend.layouts.all_model')
     <!-- Sheme Settings Modal End -->
 
-  @include('backend.layouts.pfooter')
+  @include('backend.layouts.ofooter')

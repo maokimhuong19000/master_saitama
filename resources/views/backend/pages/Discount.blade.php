@@ -1,4 +1,4 @@
-@include('backend.layouts.pheader')
+@include('backend.layouts.oheader')
   <body>
     <div id="root">
       @include('backend.layouts.left_side_bar')
@@ -774,4 +774,4 @@
     @include('backend.layouts.all_model')
     <!-- Theme Setting Modal End -->
 
-    @include('backend.layouts.pfooter')
+    @include('backend.layouts.ofooter')

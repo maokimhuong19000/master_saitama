@@ -200,7 +200,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/admin/product/list')}}">
+                            <a href="{{url('/admin/product/detail')}}">
                                 <span class="label">Detail</span>
                             </a>
                         </li>

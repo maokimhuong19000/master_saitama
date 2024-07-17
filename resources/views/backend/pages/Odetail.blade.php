@@ -592,8 +592,8 @@
       </footer>
       <!-- Layout Footer End -->
     </div>
-    <!-- Modal Start -->
-    @include('backend.layouts.all_model')
-    <!-- Modal End -->
+    <!-- Modal Start===================================================================================-->
+    {{-- @include('backend.layouts.all_model') --}}
+    <!-- Modal End===================================================================================---->
     <!-- Vendor Scripts Start -->
 @include('backend.layouts.ofooter')

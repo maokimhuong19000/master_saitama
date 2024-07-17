@@ -1,4 +1,4 @@
-@include('backend.layouts.header')
+@include('backend.layouts.sf_header')
 
   <body>
     <div id="root">
@@ -105,7 +105,7 @@
                   <div class="card h-100">
                     <span class="badge rounded-pill bg-primary me-1 position-absolute s-n2 t-2 z-index-1">SALE</span>
                     <a href="Storefront.Detail.html">
-                      <img src="img/product/small/product-1.webp" class="card-img-top sh-22" alt="card image" />
+                      <img src="{{asset('/backend/assets/img/product/small/product-1.webp')}}" class="card-img-top sh-22" alt="card image" />
                     </a>
                     <div class="card-body pb-2">
                       <h5 class="heading mb-0 d-flex">
@@ -137,7 +137,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+                {{-- <div class="col">
                   <div class="card h-100">
                     <a href="Storefront.Detail.html">
                       <img src="img/product/small/product-2.webp" class="card-img-top sh-22" alt="card image" />
@@ -503,7 +503,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> --}}
               </div>
               <!-- Product Thumbnails End -->
 
@@ -803,4 +803,4 @@
     {{-- @include('backend.layouts.all_model') --}}
     <!-- Search Modal End -->
 
-    @include('backend.layouts.footer')
+    @include('backend.layouts.sf_footer')
