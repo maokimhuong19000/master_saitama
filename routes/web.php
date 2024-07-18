@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function () {
 
     Route::controller(ProductController::class)->group(function () {
         Route::get('/admin/product/list', 'product_list')->name('admin.product.list');
+        Route::get('/admin/product/view/{id}', 'PLview')->name('admin.product.view');
         Route::get('/admin/product/detail', 'product_detail')->name('admin.product.list');
         Route::get('/admin/product/discount', 'dis')->name('admin.product.dis');
 

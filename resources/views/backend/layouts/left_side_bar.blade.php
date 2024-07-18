@@ -199,11 +199,12 @@
                                 <span class="label">List</span>
                             </a>
                         </li>
-                        <li>
+                        
+                        {{-- <li>
                             <a href="{{url('/admin/product/detail')}}">
                                 <span class="label">Detail</span>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
                 <li>

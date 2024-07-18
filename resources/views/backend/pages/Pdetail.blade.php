@@ -1,8 +1,8 @@
 @include('backend.layouts.p_dheader')
+
 <body>
     <div id="root">
-      @include('backend.layouts.left_side_bar')
-
+        @include('backend.layouts.left_side_bar')
         <main>
             <div class="container">
                 <!-- Title and Top Buttons Start -->
@@ -24,8 +24,8 @@
                         <div class="w-100 d-md-none"></div>
                         <div class="col-auto d-flex align-items-end justify-content-end">
                             <button type="button" class="btn btn-outline-primary btn-icon btn-icon-only"
-                                data-delay='{"show":"500", "hide":"0"}' data-bs-toggle="tooltip"
-                                data-bs-placement="top" title="Save">
+                                data-delay='{"show":"500", "hide":"0"}' data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Save">
                                 <i data-acorn-icon="save"></i>
                             </button>
                         </div>
@@ -61,8 +61,7 @@
                                     <form>
                                         <div class="mb-3">
                                             <label class="form-label">Title</label>
-                                            <input type="text" class="form-control"
-                                                value="Aromatic Green Candle" />
+                                            <input type="text" class="form-control" value="Aromatic Green Candle" />
                                         </div>
                                         <div class="mb-3 w-100">
                                             <label class="form-label">Category</label>
@@ -143,24 +142,28 @@
                                         <div class="mb-0">
                                             <label class="form-label">Settings</label>
                                             <div class="form-check form-switch mb-1">
-                                                <input type="checkbox" class="form-check-input"
-                                                    id="quantitySwitch1" />
-                                                <label class="form-check-label" for="quantitySwitch1">Allow out of
-                                                    stock purchase</label>
+                                                <input type="checkbox" class="form-check-input" id="quantitySwitch1"
+                                                    name="allow_out_of_stock" value="1"
+                                                    {{ $product->allow_out_of_stock ? 'checked' : '' }}>
+                                                <label class="form-check-label" for="quantitySwitch1">Allow out of stock
+                                                    purchase</label>
                                             </div>
                                             <div class="form-check form-switch mb-1">
                                                 <input type="checkbox" class="form-check-input" id="quantitySwitch2"
-                                                    checked />
+                                                    name="notify_low_stock" value="1"
+                                                    {{ $product->notify_low_stock ? 'checked' : '' }}>
                                                 <label class="form-check-label" for="quantitySwitch2">Notify low
                                                     stock</label>
                                             </div>
                                             <div class="form-check form-switch">
-                                                <input type="checkbox" class="form-check-input"
-                                                    id="quantitySwitch3" />
+                                                <input type="checkbox" class="form-check-input" id="quantitySwitch3"
+                                                    name="display_at_storefront" value="1"
+                                                    {{ $product->display_at_storefront ? 'checked' : '' }}>
                                                 <label class="form-check-label" for="quantitySwitch3">Display quantity
                                                     at storefront</label>
                                             </div>
                                         </div>
+
                                     </form>
                                 </div>
                             </div>
@@ -181,24 +184,30 @@
                             <div class="card">
                                 <div class="card-body">
                                     <form class="mb-n1">
+
                                         <label class="form-check w-100 mb-1">
-                                            <input type="checkbox" class="form-check-input" checked />
+                                            <input type="checkbox" class="form-check-input" name="standard_shipping" value="1"
+                                                {{ $product->standard_shipping ? 'checked' : '' }}>
                                             <span class="form-check-label d-block">
                                                 <span class="mb-1 lh-1-25">Standard Shipping</span>
                                                 <span class="text-muted d-block text-small mt-0">(Price Based
                                                     Rate)</span>
                                             </span>
                                         </label>
+
                                         <label class="form-check w-100 mb-1">
-                                            <input type="checkbox" class="form-check-input" checked />
+                                            <input type="checkbox" class="form-check-input" name="express_shipping" value="1"
+                                                {{ $product->express_shipping ? 'checked' : '' }}>
                                             <span class="form-check-label d-block">
                                                 <span class="mb-1 lh-1-25">Express Shipping</span>
                                                 <span class="text-muted d-block text-small mt-0">(Price Based
                                                     Rate)</span>
                                             </span>
                                         </label>
+
                                         <label class="form-check w-100 mb-1">
-                                            <input type="checkbox" class="form-check-input" checked />
+                                            <input type="checkbox" class="form-check-input" name="priority_shipping" value="1"
+                                                {{ $product->priority_shipping ? 'checked' : '' }}>
                                             <span class="form-check-label d-block">
                                                 <span class="mb-1 lh-1-25">Priority Shipping</span>
                                                 <span class="text-muted d-block text-small mt-0">(Price Based
