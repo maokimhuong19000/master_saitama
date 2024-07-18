@@ -160,7 +160,8 @@
                         @foreach ($products as $product)
                             <div class="card mb-2">
                                 <div class="row g-0 h-100 sh-lg-9 position-relative">
-                                    <a href="{{ route('admin.product.view', ['id' => $product->id]) }}" class="col-auto position-relative">
+                                    <a href="{{ route('admin.product.view', ['id' => $product->id]) }}"
+                                        class="col-auto position-relative">
                                         <img src="{{ asset('/backend/assets/img/product/small/product-1.webp') }}"
                                             alt="product" class="card-img card-img-horizontal sw-11 h-100" />
                                     </a>
@@ -169,9 +170,10 @@
                                             <div class="row g-0 h-100 align-content-center">
                                                 <a href="{{ route('admin.product.view', ['id' => $product->id]) }}"
                                                     class="col-11 col-lg-4 d-flex flex-column mb-lg-0 mb-3 pe-3 d-flex order-1 h-lg-100 justify-content-center">
-                                                    {{ $product->id }}-{{ $product->title }}
-                                                    <div class="text-small text-muted text-truncate position">#2342
-                                                    </div>
+                                                    {{ $product->title }}
+                                                    <div class="text-small text-muted text-truncate position">
+                                                        #{{ $product->id }} </div>
+
                                                 </a>
                                                 <div
                                                     class="col-12 col-lg-2 d-flex flex-column pe-1 mb-2 mb-lg-0 justify-content-center order-3">

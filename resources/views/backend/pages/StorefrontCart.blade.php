@@ -100,7 +100,7 @@
                             <div class="card mb-2">
                                 <div class="row g-0 sh-18 sh-md-14">
                                     <div class="col-auto">
-                                        <img src="img/product/small/product-1.webp"
+                                        <img src="{{asset('/backend/assets/img/banner/cta-square-1.webp')}}"
                                             class="card-img card-img-horizontal h-100 sw-9 sw-sm-13 sw-md-15"
                                             alt="thumb" />
                                     </div>
@@ -145,198 +145,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mb-2">
-                                <div class="row g-0 sh-18 sh-md-14">
-                                    <div class="col-auto">
-                                        <img src="img/product/small/product-2.webp"
-                                            class="card-img card-img-horizontal h-100 sw-9 sw-sm-13 sw-md-15"
-                                            alt="thumb" />
-                                    </div>
-                                    <div class="col position-relative h-100">
-                                        <div class="card-body">
-                                            <div class="row h-100">
-                                                <div class="col-12 col-md-6 mb-2 mb-md-0 d-flex align-items-center">
-                                                    <div class="pt-0 pb-0 pe-2">
-                                                        <div class="h6 mb-0 clamp-line" data-line="1">Aromatic Green
-                                                            Candle</div>
-                                                        <div class="text-muted text-small">Oakland</div>
-                                                        <div class="mb-0 sw-19">$ 15.75</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 pe-0 d-flex align-items-center">
-                                                    <div class="input-group spinner sw-11" data-trigger="spinner">
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-down single px-2 d-flex justify-content-center"
-                                                                data-spin="down">-</button>
-                                                        </div>
-                                                        <input type="text" class="form-control text-center px-0"
-                                                            value="1" data-rule="quantity" />
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-up single px-2 d-flex justify-content-center"
-                                                                data-spin="up">+</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-6 col-md-3 d-flex justify-content-end justify-content-md-start align-items-center">
-                                                    <div class="h6 mb-0">$ 15.75</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button
-                                            class="btn btn-sm btn-icon btn-icon-only btn btn-foreground-alternate position-absolute t-2 e-2"
-                                            type="button">
-                                            <i data-acorn-icon="error-hexagon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card mb-2">
-                                <div class="row g-0 sh-18 sh-md-14">
-                                    <div class="col-auto">
-                                        <img src="img/product/small/product-3.webp"
-                                            class="card-img card-img-horizontal h-100 sw-9 sw-sm-13 sw-md-15"
-                                            alt="thumb" />
-                                    </div>
-                                    <div class="col position-relative h-100">
-                                        <div class="card-body">
-                                            <div class="row h-100">
-                                                <div class="col-12 col-md-6 mb-2 mb-md-0 d-flex align-items-center">
-                                                    <div class="pt-0 pb-0 pe-2">
-                                                        <div class="h6 mb-0 clamp-line" data-line="1">Good Glass
-                                                            Teapot</div>
-                                                        <div class="text-muted text-small">Ikea</div>
-                                                        <div class="mb-0 sw-19">$ 8.50</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 pe-0 d-flex align-items-center">
-                                                    <div class="input-group spinner sw-11" data-trigger="spinner">
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-down single px-2 d-flex justify-content-center"
-                                                                data-spin="down">-</button>
-                                                        </div>
-                                                        <input type="text" class="form-control text-center px-0"
-                                                            value="2" data-rule="quantity" />
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-up single px-2 d-flex justify-content-center"
-                                                                data-spin="up">+</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-6 col-md-3 d-flex justify-content-end justify-content-md-start align-items-center">
-                                                    <div class="h6 mb-0">$ 17.00</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button
-                                            class="btn btn-sm btn-icon btn-icon-only btn btn-foreground-alternate position-absolute t-2 e-2"
-                                            type="button">
-                                            <i data-acorn-icon="error-hexagon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card mb-2">
-                                <div class="row g-0 sh-18 sh-md-14">
-                                    <div class="col-auto">
-                                        <img src="img/product/small/product-4.webp"
-                                            class="card-img card-img-horizontal h-100 sw-9 sw-sm-13 sw-md-15"
-                                            alt="thumb" />
-                                    </div>
-                                    <div class="col position-relative h-100">
-                                        <div class="card-body">
-                                            <div class="row h-100">
-                                                <div class="col-12 col-md-6 mb-2 mb-md-0 d-flex align-items-center">
-                                                    <div class="pt-0 pb-0 pe-2">
-                                                        <div class="h6 mb-0 clamp-line" data-line="1">Modern Dark Pot
-                                                        </div>
-                                                        <div class="text-muted text-small">Ikea</div>
-                                                        <div class="mb-0 sw-19">$ 18.75</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 pe-0 d-flex align-items-center">
-                                                    <div class="input-group spinner sw-11" data-trigger="spinner">
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-down single px-2 d-flex justify-content-center"
-                                                                data-spin="down">-</button>
-                                                        </div>
-                                                        <input type="text" class="form-control text-center px-0"
-                                                            value="2" data-rule="quantity" />
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-up single px-2 d-flex justify-content-center"
-                                                                data-spin="up">+</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-6 col-md-3 d-flex justify-content-end justify-content-md-start align-items-center">
-                                                    <div class="h6 mb-0">$ 37.50</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button
-                                            class="btn btn-sm btn-icon btn-icon-only btn btn-foreground-alternate position-absolute t-2 e-2"
-                                            type="button">
-                                            <i data-acorn-icon="error-hexagon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card mb-2">
-                                <div class="row g-0 sh-18 sh-md-14">
-                                    <div class="col-auto">
-                                        <img src="img/product/small/product-5.webp"
-                                            class="card-img card-img-horizontal h-100 sw-9 sw-sm-13 sw-md-15"
-                                            alt="thumb" />
-                                    </div>
-                                    <div class="col position-relative h-100">
-                                        <div class="card-body">
-                                            <div class="row h-100">
-                                                <div class="col-12 col-md-6 mb-2 mb-md-0 d-flex align-items-center">
-                                                    <div class="pt-0 pb-0 pe-2">
-                                                        <div class="h6 mb-0 clamp-line" data-line="1">Wood Handle
-                                                            Hunter Knife</div>
-                                                        <div class="text-muted text-small">Buck Knives</div>
-                                                        <div class="mb-0 sw-19">$ 12.00</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 pe-0 d-flex align-items-center">
-                                                    <div class="input-group spinner sw-11" data-trigger="spinner">
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-down single px-2 d-flex justify-content-center"
-                                                                data-spin="down">-</button>
-                                                        </div>
-                                                        <input type="text" class="form-control text-center px-0"
-                                                            value="3" data-rule="quantity" />
-                                                        <div class="input-group-text">
-                                                            <button type="button"
-                                                                class="spin-up single px-2 d-flex justify-content-center"
-                                                                data-spin="up">+</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-6 col-md-3 d-flex justify-content-end justify-content-md-start align-items-center">
-                                                    <div class="h6 mb-0">$ 36.00</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button
-                                            class="btn btn-sm btn-icon btn-icon-only btn btn-foreground-alternate position-absolute t-2 e-2"
-                                            type="button">
-                                            <i data-acorn-icon="error-hexagon"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <!-- Items End -->
 
@@ -347,7 +155,7 @@
                             </div>
                             <div class="col-12 col-sm-6 col-xxl-3">
                                 <div class="card w-100 sh-19 sh-sm-25 hover-img-scale-up">
-                                    <img src="img/banner/cta-square-1.webp" class="card-img h-100 scale"
+                                    <img src="{{asset('/backend/assets/img/banner/cta-square-1.webp')}}" class="card-img h-100 scale"
                                         alt="card image" />
                                     <div
                                         class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
@@ -366,7 +174,7 @@
                             </div>
                             <div class="col-12 col-sm-6 col-xxl-3">
                                 <div class="card w-100 sh-19 sh-sm-25 hover-img-scale-up">
-                                    <img src="img/banner/cta-square-2.webp" class="card-img h-100 scale"
+                                    <img src="{{asset('/backend/assets/img/banner/cta-square-1.webp')}}" class="card-img h-100 scale"
                                         alt="card image" />
                                     <div
                                         class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
@@ -385,7 +193,7 @@
                             </div>
                             <div class="col-12 col-sm-6 col-xxl-3">
                                 <div class="card w-100 sh-19 sh-sm-25 hover-img-scale-up">
-                                    <img src="img/banner/cta-square-3.webp" class="card-img h-100 scale"
+                                    <img src="{{asset('/backend/assets/img/banner/cta-square-1.webp')}}" class="card-img h-100 scale"
                                         alt="card image" />
                                     <div
                                         class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
@@ -404,7 +212,7 @@
                             </div>
                             <div class="col-12 col-sm-6 col-xxl-3">
                                 <div class="card w-100 sh-19 sh-sm-25 hover-img-scale-up">
-                                    <img src="img/banner/cta-square-4.webp" class="card-img h-100 scale"
+                                    <img src="{{asset('/backend/assets/img/banner/cta-square-1.webp')}}" class="card-img h-100 scale"
                                         alt="card image" />
                                     <div
                                         class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">

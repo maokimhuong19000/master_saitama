@@ -31,12 +31,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/admin/home', 'home')->name('admin.home');
     });
 
+    // Product Route
     Route::controller(ProductController::class)->group(function () {
         Route::get('/admin/product/list', 'product_list')->name('admin.product.list');
-        Route::get('/admin/product/view/{id}', 'PLview')->name('admin.product.view');
         Route::get('/admin/product/detail', 'product_detail')->name('admin.product.list');
         Route::get('/admin/product/discount', 'dis')->name('admin.product.dis');
+        Route::get('/admin/product/view/{id}', 'PLview')->name('admin.product.view');
 
+        Route::get('/admin/product/add   ', 'product_add')->name('admin.product.add');
     });
 
 
