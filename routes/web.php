@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\MasterController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\ProductCategoriesController;
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\StoreFrontController;
@@ -34,13 +35,18 @@ Route::middleware('auth')->group(function () {
     // Product Route
     Route::controller(ProductController::class)->group(function () {
         Route::get('/admin/product/list', 'product_list')->name('admin.product.list');
-        Route::get('/admin/product/detail', 'product_detail')->name('admin.product.list');
+        Route::get('/admin/product/detail', 'product_detail')->name('admin.product.detail');
         Route::get('/admin/product/discount', 'dis')->name('admin.product.dis');
         Route::get('/admin/product/view/{id}', 'PLview')->name('admin.product.view');
 
-        Route::get('/admin/product/add   ', 'product_add')->name('admin.product.add');
+        Route::get('/admin/product/add', 'product_add')->name('admin.product.add');
+        Route::post('/admin/product/save', 'product_save')->name('admin.product.save');
+        
     });
 
+    Route::controller(ProductCategoriesController::class)->group(function(){
+     
+    });
 
     Route::controller(CustomerController::class)->group(function () {
         Route::get('/admin/customer/list', 'cus_list')->name('admin.cus.list');
@@ -78,7 +84,8 @@ Route::middleware('auth')->group(function () {
 
 
 Route::controller(AuthController::class)->group(function(){
-    Route::get('/login','index')->name('login');
+    // Route::get('/login','index')->name('login');
+    Route::get('/','index')->name('login');
     Route::post('/postLogin','postLogin')->name('login.post');
     Route::get('/register','indexer')->name('register');
     Route::post('/doRegister','doRegister')->name('doRegister');

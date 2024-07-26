@@ -61,60 +61,33 @@
                                     <form>
                                         <div class="mb-3">
                                             <label class="form-label">Title</label>
-                                            <input type="text" class="form-control" value="Aromatic Green Candle" />
+                                            <input type="text" class="form-control" value="{{ $product->title }}" />
                                         </div>
                                         <div class="mb-3 w-100">
                                             <label class="form-label">Category</label>
                                             <select class="select-single-no-search">
-                                                <option label="&nbsp;"></option>
-                                                <option value="Breadstick">Whole Wheat</option>
-                                                <option value="Biscotti">Rye</option>
-                                                <option value="Fougasse" selected>Sourdough</option>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}"
+                                                        {{ $product->category_id == $category->id ? 'selected' : '' }}>
+                                                        {{ $category->name }}
+                                                    </option>
+                                                @endforeach
                                             </select>
+
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Description</label>
                                             <div class="html-editor-bubble html-editor sh-13" id="quillEditorBubble">
-                                                Dessert gummies soufflé toffee cake. Sesame snaps marzipan sesame snaps
-                                                gummies oat cake sesame snaps.
+                                               {{$product->description}}
                                             </div>
                                         </div>
-                                        <div class="mb-3">
+                                        {{-- <div class="mb-3">
                                             <label class="form-label">Details</label>
                                             <div class="html-editor-bubble html-editor sh-25" id="quillEditorDetails">
-                                                <h6>Candy Muffin</h6>
-                                                <p>
-                                                    Marshmallow halvah gummi bears dragée. Pudding tart macaroon jelly
-                                                    beans bonbon. Dessert ice cream sweet powder topping biscuit
-                                                    gummies jujubes. Candy muffin croissant. Gummi bears jelly beans
-                                                    tootsie roll powder macaroon. Danish brownie cake bar candy.
-                                                </p>
-                                                <p><br /></p>
-                                                <h6>Fruitcake</h6>
-                                                <p>
-                                                    Sugar plum fruitcake cotton candy lemon drops. Carrot cake bear claw
-                                                    fruitcake dragée pie cotton candy sesame snaps lollipop
-                                                    croissant. Croissant brownie pie. Candy sweet roll pudding pastry
-                                                    cotton candy donut apple pie cotton candy cookie. Icing cake
-                                                    donut. Topping candy canes fruitcake. Brownie danish cake.
-                                                    Marshmallow donut sweet roll. Wafer tootsie roll gingerbread
-                                                    croissant
-                                                    ice cream.
-                                                </p>
-                                                <p><br /></p>
-                                                <h6>Gummi Bears</h6>
-                                                <p>
-                                                    Dessert ice cream sweet powder topping biscuit gummies jujubes.
-                                                    Candy muffin croissant. Gummi bears jelly beans tootsie roll powder
-                                                    macaroon. Danish brownie cake gingerbread tiramisu chocolate bar
-                                                    candy. Jujubes apple pie tootsie roll topping croissant bear claw
-                                                    tootsie roll.Pastry cake bear claw marzipan jelly beans pastry lemon
-                                                    drops. Tart powder dragée cotton candy sugar plum jelly beans
-                                                    pastry tart sugar plum. Dragée jelly beans halvah chupa chups icing
-                                                    tart cake tootsie roll lemon drops.
-                                                </p>
+                                                {{$product->detail}}
+                                                
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </form>
                                 </div>
                             </div>
@@ -129,15 +102,15 @@
                                     <form>
                                         <div class="mb-3">
                                             <label class="form-label">SKU</label>
-                                            <input type="text" class="form-control" value="DB063-0003" />
+                                            <input type="text" class="form-control" value="{{$product->sku}}"  />
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Barcode</label>
-                                            <input type="text" class="form-control" value="038678561125" />
+                                            <input type="text" class="form-control" value="{{$product->barcode}}" />
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Quantity</label>
-                                            <input type="text" class="form-control" value="228" />
+                                            <input type="text" class="form-control" value="{{$product->quantity}}" />
                                         </div>
                                         <div class="mb-0">
                                             <label class="form-label">Settings</label>
@@ -186,8 +159,8 @@
                                     <form class="mb-n1">
 
                                         <label class="form-check w-100 mb-1">
-                                            <input type="checkbox" class="form-check-input" name="standard_shipping" value="1"
-                                                {{ $product->standard_shipping ? 'checked' : '' }}>
+                                            <input type="checkbox" class="form-check-input" name="standard_shipping"
+                                                value="1" {{ $product->standard_shipping ? 'checked' : '' }}>
                                             <span class="form-check-label d-block">
                                                 <span class="mb-1 lh-1-25">Standard Shipping</span>
                                                 <span class="text-muted d-block text-small mt-0">(Price Based
@@ -196,8 +169,8 @@
                                         </label>
 
                                         <label class="form-check w-100 mb-1">
-                                            <input type="checkbox" class="form-check-input" name="express_shipping" value="1"
-                                                {{ $product->express_shipping ? 'checked' : '' }}>
+                                            <input type="checkbox" class="form-check-input" name="express_shipping"
+                                                value="1" {{ $product->express_shipping ? 'checked' : '' }}>
                                             <span class="form-check-label d-block">
                                                 <span class="mb-1 lh-1-25">Express Shipping</span>
                                                 <span class="text-muted d-block text-small mt-0">(Price Based
@@ -206,8 +179,8 @@
                                         </label>
 
                                         <label class="form-check w-100 mb-1">
-                                            <input type="checkbox" class="form-check-input" name="priority_shipping" value="1"
-                                                {{ $product->priority_shipping ? 'checked' : '' }}>
+                                            <input type="checkbox" class="form-check-input" name="priority_shipping"
+                                                value="1" {{ $product->priority_shipping ? 'checked' : '' }}>
                                             <span class="form-check-label d-block">
                                                 <span class="mb-1 lh-1-25">Priority Shipping</span>
                                                 <span class="text-muted d-block text-small mt-0">(Price Based
@@ -226,52 +199,31 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="mb-n6 border-last-none">
+                                      
                                         <div class="mb-3 pb-3 border-bottom border-separator-light">
                                             <div class="row gx-2">
                                                 <div class="col col-md-auto order-1">
                                                     <div class="mb-3">
                                                         <label class="form-label">Name</label>
-                                                        <input class="form-control w-100 sw-md-13" value="Type" />
+                                                        {{-- <input class="form-control w-100 sw-md-13" value="{{ $product_detail->attribute_names}}" /> --}}
                                                     </div>
                                                 </div>
                                                 <div class="col-md order-3">
                                                     <div class="mb-0">
                                                         <label class="form-label">Values</label>
-                                                        <input name="tagsBasic" value="Whole Wheat, Rye, Sourdough" />
+                                                        {{-- <input name="tagsBasic" value="{{ $product_detail->attribute_values }}" /> --}}
                                                     </div>
                                                 </div>
                                                 <div class="col-auto order-2 order-md-4">
                                                     <label class="d-block form-label">&nbsp;</label>
-                                                    <button class="btn btn-icon btn-icon-only btn-outline-primary"
-                                                        type="button">
+                                                    <button class="btn btn-icon btn-icon-only btn-outline-primary" type="button">
                                                         <i data-acorn-icon="bin"></i>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="mb-3 pb-3 border-bottom border-separator-light">
-                                            <div class="row gx-2">
-                                                <div class="col col-md-auto order-1">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Name</label>
-                                                        <input class="form-control w-100 sw-md-13" value="Size" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md order-3">
-                                                    <div class="mb-0">
-                                                        <label class="form-label">Values</label>
-                                                        <input name="tagsBasic" value="S, M, L, XL" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto order-2 order-md-4">
-                                                    <label class="d-block form-label">&nbsp;</label>
-                                                    <button class="btn btn-icon btn-icon-only btn-outline-primary"
-                                                        type="button">
-                                                        <i data-acorn-icon="bin"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    
+                                    
                                         <div class="mb-3 pb-3 border-bottom text-center">
                                             <button type="button"
                                                 class="btn btn-foreground hover-outline btn-icon btn-icon-start mt-2">
@@ -296,12 +248,12 @@
                                         <div class="mb-3">
                                             <label class="form-label">Tax Excluded</label>
                                             <input type="text" class="form-control mask-currency"
-                                                value="16,20" />
+                                                value="{{$product->tax_excluded}}" />
                                         </div>
                                         <div class="mb-0">
                                             <label class="form-label">Tax Included</label>
                                             <input type="text" class="form-control mask-currency"
-                                                value="20,40" />
+                                                value="{{$product->tax_included}}" />
                                         </div>
                                     </form>
                                 </div>

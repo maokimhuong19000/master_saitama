@@ -11,7 +11,7 @@
                         <div class="w-auto sw-md-30">
                             <a href="#" class="muted-link pb-1 d-inline-block breadcrumb-back">
                                 <i data-acorn-icon="chevron-left" data-acorn-size="13"></i>
-                                <span class="text-small align-middle">Home</span>
+                                <span class="text-small align-middle">Home </span>
                             </a>
                             <h1 class="mb-0 pb-0 display-4" id="title">Product List</h1>
                         </div>
@@ -22,7 +22,7 @@
                     <div class="w-100 d-md-none"></div>
                     <div
                         class="col-12 col-sm-6 col-md-auto d-flex align-items-end justify-content-end mb-2 mb-sm-0 order-sm-3">
-                        <button type="button"
+                        <a href="{{url('admin/product/add')}}"
                             class="btn btn-outline-primary btn-icon btn-icon-start ms-0 ms-sm-1 w-100 w-md-auto">
                             <i data-acorn-icon="plus"></i>
                             <span>Add Product</span>

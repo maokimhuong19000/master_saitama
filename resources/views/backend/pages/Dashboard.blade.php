@@ -1,5 +1,5 @@
-@include('backend.layouts.header')
-
+{{-- @include('backend.layouts.header') --}}
+@include('backend.layouts.pheader')
   <body>
     <div id="root">
       {{-- Left Side bar --}}

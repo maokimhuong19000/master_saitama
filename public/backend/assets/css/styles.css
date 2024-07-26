@@ -14714,6 +14714,23 @@ html[data-placement=horizontal] .nav-container .menu-icons li > a {
     margin-right: 5px;
   }
 }
+/* Example CSS to style textarea similar to rich text editor */
+.html-editor-textarea {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #212529;
+  resize: vertical; /* Allows vertical resizing */
+}
+
+.html-editor-textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
 
 /*
 * Vertical
