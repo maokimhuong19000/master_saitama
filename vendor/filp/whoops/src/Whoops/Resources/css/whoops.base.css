@@ -445,7 +445,7 @@ kbd {
 }
 
 /* Stack details tables */
-@media (max-width: 1000px) {
+@media (max-width: 400px) {
   .data-table,
   .data-table tbody,
   .data-table tbody tr,

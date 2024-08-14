@@ -7,26 +7,25 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace PHPUnit\Runner\Baseline;
+namespace PHPUnit\Framework\MockObject;
 
 use function sprintf;
-use PHPUnit\Runner\Exception;
-use RuntimeException;
 
 /**
  * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
  *
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
-final class FileDoesNotHaveLineException extends RuntimeException implements Exception
+final class NoMoreReturnValuesConfiguredException extends \PHPUnit\Framework\Exception implements Exception
 {
-    public function __construct(string $file, int $line)
+    public function __construct(Invocation $invocation, int $numberOfConfiguredReturnValues)
     {
         parent::__construct(
             sprintf(
-                'File "%s" does not have line %d',
-                $file,
-                $line,
+                'Only %d return values have been configured for %s::%s()',
+                $numberOfConfiguredReturnValues,
+                $invocation->className(),
+                $invocation->methodName(),
             ),
         );
     }

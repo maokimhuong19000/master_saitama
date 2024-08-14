@@ -23,40 +23,40 @@ class ProductController extends Controller
     // product view
     public function PLview($id)
     {
-        
-            $product = DB::table('products')
-                ->join('product_details', 'products.id', '=', 'product_details.product_id')
-                ->join('product_categories', 'products.category_id', '=', 'product_categories.id')
-                ->where('products.id', $id)
-                ->select(
-                    'products.*',
-                    'product_details.sku',
-                    'product_details.barcode',
-                    'product_details.quantity',
-                    'product_details.allow_out_of_stock',
-                    'product_details.notify_low_stock',
-                    'product_details.display_at_storefront',
-                    'product_details.standard_shipping',
-                    'product_details.express_shipping',
-                    'product_details.priority_shipping',
-                    'product_details.attribute_names',
-                    'product_details.attribute_values',
-                    'product_details.tax_excluded',
-                    'product_details.tax_included',
-                    'product_details.image_url',
-                    'product_details.gallery_urls',
-                    'product_categories.name as category_name'
-                )
-                ->first();
 
-            
+        $product = DB::table('products')
+            ->join('product_details', 'products.id', '=', 'product_details.product_id')
+            ->join('product_categories', 'products.category_id', '=', 'product_categories.id')
+            ->where('products.id', $id)
+            ->select(
+                'products.*',
+                'product_details.sku',
+                'product_details.barcode',
+                'product_details.quantity',
+                'product_details.allow_out_of_stock',
+                'product_details.notify_low_stock',
+                'product_details.display_at_storefront',
+                'product_details.standard_shipping',
+                'product_details.express_shipping',
+                'product_details.priority_shipping',
+                'product_details.attribute_names',
+                'product_details.attribute_values',
+                'product_details.tax_excluded',
+                'product_details.tax_included',
+                'product_details.image_url',
+                'product_details.gallery_urls',
+                'product_categories.name as category_name'
+            )
+            ->first();
 
-            $categories = ProductCategories::all();
-            $product_detail = ProductDetail::all();
-            // dd($product, $categories, $product_detail);
-            return view('backend.pages.Pdetail', compact('product', 'categories', 'product_detail'));
 
-       
+
+        $categories = ProductCategories::all();
+        $product_detail = ProductDetail::all();
+        // dd($product, $categories, $product_detail);
+        return view('backend.pages.Pdetail', compact('product', 'categories', 'product_detail'));
+
+
     }
 
     //product add
